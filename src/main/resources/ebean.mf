@@ -1,0 +1,3 @@
+entity-packages: org.waastad.meecroebeanserialization.domain
+transactional-packages: org.waastad.meecroebeanserialization.repository
+querybean-packages: org.waastad.meecroebeanserialization.domain,org.waastad.meecroebeanserialization.repository

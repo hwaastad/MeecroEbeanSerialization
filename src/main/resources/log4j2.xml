@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{50} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="io.ebean.SQL" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="io.ebean.TXN" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="io.ebean.SUM" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="io.ebean.cache.NATKEY" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="io.ebean.cache.QUERY" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="io.ebean.cache.BEAN" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+        <Logger name="io.ebean.cache.COLL" level="trace" additivity="false">
+            <AppenderRef ref="console"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>
