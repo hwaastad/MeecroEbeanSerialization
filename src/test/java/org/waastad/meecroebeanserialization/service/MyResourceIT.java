@@ -5,16 +5,12 @@
  */
 package org.waastad.meecroebeanserialization.service;
 
-import io.ebean.Ebean;
-import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import javax.ws.rs.client.ClientBuilder;
 import lombok.extern.log4j.Log4j2;
-import org.apache.cxf.ext.logging.LoggingFeature;
-import org.apache.cxf.jaxrs.client.WebClient;
 import org.apache.meecrowave.Meecrowave;
 import org.junit.Test;
 import org.waastad.meecroebeanserialization.domain.Item;
@@ -47,7 +43,7 @@ public class MyResourceIT {
          Item item = Item.builder().itemName("itemname").build();
          user.addItem(item);
          user.save();
-         meecrowave.inject(this);
+
          ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 5, 0, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10));
          CountDownLatch startSignal = new CountDownLatch(1);
          CountDownLatch doneSignal = new CountDownLatch(numberOfClients);
@@ -97,6 +93,21 @@ public class MyResourceIT {
 
       }
 
+   }
+   
+   @Test
+   public void testDeleteCascade() throws Exception {
+      Meecrowave.Builder builder = new Meecrowave.Builder();
+      builder.randomHttpPort();
+      try (Meecrowave meecrowave = new Meecrowave(builder).bake()) {
+         meecrowave.inject(this);
+         User user = User.builder().name("username").age(40).build();
+         Item item = Item.builder().itemName("itemname").build();
+         user.addItem(item);
+         user.save();
+         
+         user.delete();
+      }
    }
 
 }

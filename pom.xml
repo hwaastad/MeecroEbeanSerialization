@@ -76,6 +76,11 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.avaje.ebeanorm</groupId>
+                <artifactId>codegen-maven-plugin</artifactId>
+                <version>1.2</version>
+            </plugin>
+            <plugin>
                 <groupId>io.ebean</groupId>
                 <artifactId>ebean-maven-plugin</artifactId>
                 <version>11.9.1</version>

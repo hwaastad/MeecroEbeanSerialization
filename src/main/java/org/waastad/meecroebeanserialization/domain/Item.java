@@ -5,6 +5,7 @@
  */
 package org.waastad.meecroebeanserialization.domain;
 
+import org.waastad.meecroebeanserialization.domain.finder.ItemFinder;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import lombok.Builder;
@@ -18,6 +19,8 @@ import lombok.Data;
 @Data
 @Builder
 public class Item extends BaseModel {
+
+  public static final ItemFinder find = new ItemFinder();
 
    private String itemName;
    @ManyToOne

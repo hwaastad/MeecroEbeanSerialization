@@ -13,7 +13,6 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.RandomUtils;
 import org.waastad.meecroebeanserialization.db.Retry;
 import org.waastad.meecroebeanserialization.domain.User;
-import org.waastad.meecroebeanserialization.domain.query.QUser;
 
 @Dependent
 @Log4j2
@@ -21,7 +20,7 @@ public class Repository {
 
    public List<User> findUsers() {
       log.info("Returning fetch Users");
-      return new QUser().userItems.fetch().findList();
+      return User.find.findUsersWithFetch();
    }
 
    public void updateUser(User user) {
@@ -31,7 +30,7 @@ public class Repository {
 
    public User findUserByName(String name) {
       log.info("Lookup user");
-      return new QUser().name.eq(name).findOne();
+      return User.find.findUserByName(name);
    }
 
    @Transactional

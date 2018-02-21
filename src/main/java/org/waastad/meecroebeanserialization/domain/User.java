@@ -5,7 +5,7 @@
  */
 package org.waastad.meecroebeanserialization.domain;
 
-import io.ebean.Finder;
+import org.waastad.meecroebeanserialization.domain.finder.UserFinder;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -23,6 +23,8 @@ import lombok.Data;
 @Data
 @Builder
 public class User extends BaseModel {
+
+  public static final UserFinder find = new UserFinder();
 
    private String name;
    private int age;
