@@ -26,12 +26,12 @@
         <dependency>
             <groupId>io.ebean</groupId>
             <artifactId>ebean</artifactId>
-            <version>11.10.6</version>
+            <version>11.11.1</version>
         </dependency>
         <dependency>
             <groupId>io.ebean</groupId>
             <artifactId>ebean-querybean</artifactId>
-            <version>11.1.1</version>
+            <version>11.2.1</version>
         </dependency>
         <dependency>
             <groupId>io.ebean</groupId>
@@ -83,7 +83,7 @@
             <plugin>
                 <groupId>io.ebean</groupId>
                 <artifactId>ebean-maven-plugin</artifactId>
-                <version>11.9.1</version>
+                <version>11.10.1</version>
                 <executions>
                     <execution>
                         <id>main</id>
