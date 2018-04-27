@@ -8,18 +8,18 @@ package org.waastad.meecroebeanserialization.db;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.sql.DataSource;
+
 import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.h2.Driver;
 
 /**
- *
  * @author helge
  */
 @ApplicationScoped
 @Log4j2
 public class DataSourceProducer {
-   
+
    @Produces
    DataSource getDataSource() {
       final BasicDataSource source = new BasicDataSource();

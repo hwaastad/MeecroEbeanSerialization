@@ -10,6 +10,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import javax.ws.rs.client.ClientBuilder;
+
 import lombok.extern.log4j.Log4j2;
 import org.apache.meecrowave.Meecrowave;
 import org.junit.Test;
@@ -18,7 +19,6 @@ import org.waastad.meecroebeanserialization.domain.User;
 import org.waastad.meecroebeanserialization.json.EbeanJsonWriter;
 
 /**
- *
  * @author helge
  */
 @Log4j2
@@ -94,7 +94,7 @@ public class MyResourceIT {
       }
 
    }
-   
+
    @Test
    public void testDeleteCascade() throws Exception {
       Meecrowave.Builder builder = new Meecrowave.Builder();
@@ -105,7 +105,7 @@ public class MyResourceIT {
          Item item = Item.builder().itemName("itemname").build();
          user.addItem(item);
          user.save();
-         
+
          user.delete();
       }
    }

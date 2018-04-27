@@ -6,13 +6,14 @@
 package org.waastad.meecroebeanserialization.domain;
 
 import io.ebean.Model;
+
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
+
 import lombok.Data;
 
 /**
- *
  * @author helge
  */
 @MappedSuperclass

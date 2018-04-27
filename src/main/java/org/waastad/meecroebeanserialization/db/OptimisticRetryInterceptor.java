@@ -11,6 +11,7 @@ import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 import javax.persistence.OptimisticLockException;
+
 import lombok.extern.log4j.Log4j2;
 
 @Interceptor

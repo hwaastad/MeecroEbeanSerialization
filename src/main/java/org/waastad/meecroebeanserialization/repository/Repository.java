@@ -6,9 +6,11 @@
 package org.waastad.meecroebeanserialization.repository;
 
 import io.ebean.annotation.Transactional;
+
 import java.util.List;
 import javax.enterprise.context.Dependent;
 import javax.persistence.OptimisticLockException;
+
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.RandomUtils;
 import org.waastad.meecroebeanserialization.db.Retry;

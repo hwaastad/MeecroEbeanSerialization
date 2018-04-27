@@ -1,7 +1,9 @@
 package org.waastad.meecroebeanserialization.domain.finder;
 
 import io.ebean.Finder;
+
 import java.util.List;
+
 import org.waastad.meecroebeanserialization.domain.User;
 import org.waastad.meecroebeanserialization.domain.query.QUser;
 
@@ -38,7 +40,7 @@ public class UserFinder extends Finder<Integer, User> {
    public List<User> findUsersWithFetch() {
       return new QUser().userItems.fetch().findList();
    }
-   
+
    public User findUserByName(String name) {
       return new QUser().name.eq(name).findOne();
    }

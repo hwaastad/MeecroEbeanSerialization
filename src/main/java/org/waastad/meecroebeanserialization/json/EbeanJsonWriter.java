@@ -6,6 +6,7 @@
 package org.waastad.meecroebeanserialization.json;
 
 import io.ebean.Ebean;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -21,7 +22,6 @@ import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
 /**
- *
  * @author helge
  */
 @Provider

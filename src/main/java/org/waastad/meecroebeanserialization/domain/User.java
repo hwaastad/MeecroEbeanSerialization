@@ -6,17 +6,18 @@
 package org.waastad.meecroebeanserialization.domain;
 
 import org.waastad.meecroebeanserialization.domain.finder.UserFinder;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+
 import lombok.Builder;
 import lombok.Data;
 
 /**
- *
  * @author helge
  */
 @Entity
@@ -24,7 +25,7 @@ import lombok.Data;
 @Builder
 public class User extends BaseModel {
 
-  public static final UserFinder find = new UserFinder();
+   public static final UserFinder find = new UserFinder();
 
    private String name;
    private int age;

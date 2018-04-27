@@ -7,14 +7,15 @@ package org.waastad.meecroebeanserialization.domain;
 
 import io.ebean.Ebean;
 import io.ebean.text.json.EJson;
+
 import javax.json.Json;
+
 import lombok.extern.log4j.Log4j2;
 import org.apache.johnzon.mapper.Mapper;
 import org.apache.johnzon.mapper.MapperBuilder;
 import org.junit.Test;
 
 /**
- *
  * @author helge
  */
 @Log4j2

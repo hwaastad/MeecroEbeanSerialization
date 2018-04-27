@@ -9,16 +9,17 @@ import io.ebean.EbeanServer;
 import io.ebean.EbeanServerFactory;
 import io.ebean.config.ServerConfig;
 import io.ebean.config.dbplatform.h2.H2Platform;
+
 import javax.inject.Inject;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
+
 import lombok.extern.log4j.Log4j2;
 import org.waastad.meecroebeanserialization.domain.User;
 
 /**
- *
  * @author helge
  */
 @WebListener
